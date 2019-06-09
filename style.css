@@ -32,15 +32,19 @@ header {
 }
 
 .title h3 {
-    font-size: 24px;
+    font-size: 30px;
     margin-bottom: 6px;
     font-family: 'Oswald', sans-serif;
+    font-weight: normal;
 }
 .title h6 {
     margin-top: 4px;
+    font-size: 11px;
+    font-weight: normal;
 }
 
 .left {
+    padding-top: 20px;
     border-right: 2px solid #B6ADB0;
     width: 100%;
 }
