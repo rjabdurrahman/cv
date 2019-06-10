@@ -5,7 +5,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.container{
+.container {
     box-shadow: 5px 10px 10px #B6ADB0;
 }
 
@@ -38,6 +38,7 @@ header {
     font-weight: normal;
     color: #f89653;
 }
+
 .title h6 {
     margin-top: 4px;
     font-size: 11px;
@@ -82,7 +83,7 @@ header {
     padding: 15px 40px;
 }
 
-.social a{
+.social a {
     color: #ede8e8;
     text-decoration: none;
 }
@@ -92,7 +93,41 @@ header {
     margin: 0;
     padding: 0;
 }
+
 .social li {
     display: inline;
     margin: 6px 12px;
+}
+
+.f-style {
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.skills div {
+    padding: 20px 15px;
+}
+
+.skills div:first-child{
+    background-color: #74CEF1;
+}
+
+.skills div:last-child{
+    background-color: #E2D23E;
+}
+
+.skills h3 {
+    margin: 0;
+}
+
+.skills h3::after {
+    background-color: #000;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+    margin-left: 40px;
 }
