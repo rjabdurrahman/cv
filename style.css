@@ -202,6 +202,20 @@ header {
     padding-right: 20px;
 }
 
+.hobbies ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.hobbies ul li {
+    display: inline-block;
+}
+
+.hobbies ul li i{
+    font-size: 40px;
+}
+
 .lang {
     background-color: #efefef;
 }
