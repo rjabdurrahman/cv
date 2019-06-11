@@ -134,11 +134,11 @@ header {
     margin-left: 40px;
 }
 
-.experience h3::after {
+.experience h3::after, .hobbies h3::after {
     width: 330px;
 }
 
-.skills h3::after {
+.skills h3::after, .lang h3::after {
     width: 50%;
 }
 
@@ -150,12 +150,12 @@ header {
     background-image: linear-gradient(to bottom left, rgb(255, 255, 255), rgb(245, 245, 245));
 }
 
-.table-data table{
+.table-data table {
     border-collapse: collapse;
     border: none;
 }
 
-.table-data table tr td{
+.table-data table tr td {
     padding-bottom: 30px;
 }
 
@@ -190,12 +190,12 @@ header {
     margin: 0;
 }
 
-.skills table {
+.skills table, .lang table {
     font-size: 12px;
     font-weight: bold;
 }
 
-.skills table tr td:first-child {
+.skills table tr td:first-child, .lang table tr td:first-child {
     text-align: right;
     padding-top: 5px;
     padding-bottom: 5px;
