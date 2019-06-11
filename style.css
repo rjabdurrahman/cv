@@ -7,7 +7,8 @@ body {
 
 .container {
     box-shadow: 5px 10px 10px #B6ADB0;
-    min-height: 297mm;
+    height: 297mm;
+    margin-bottom: 50px;
 }
 
 header {
@@ -228,4 +229,5 @@ header {
 
 .lang {
     background-color: #efefef;
+    height: 168px;
 }
