@@ -10,7 +10,8 @@ body {
 }
 
 header {
-    background-color: rgb(100, 100, 100);
+    background-image: linear-gradient(to bottom right, rgb(100, 100, 100), rgb(20, 20, 20));
+    /* background-color: rgb(100, 100, 100); */
     padding: 20px 20px 5px;
     color: #ede8e8;
     font-size: 14px;
