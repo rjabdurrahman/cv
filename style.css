@@ -133,7 +133,7 @@ header {
     margin-left: 40px;
 }
 
-.experience h3::after{
+.experience h3::after {
     width: 330px;
 }
 
@@ -141,8 +141,40 @@ header {
     width: 50%;
 }
 
-.experience{
-    background-image: linear-gradient(to bottom left, rgb(255, 255, 255), rgb(240, 240, 240));
+.experience {
+    background-image: linear-gradient(to bottom left, rgb(255, 255, 255), rgb(245, 245, 245));
+}
+
+.experience table{
+    border-collapse: collapse;
+    border: none;
+}
+
+.experience table tr td:first-child {
+    width: 85px;
+    padding-right: 35px;
+    text-align: right;
+}
+
+.experience table tr td h4 {
+    margin: 0;
+    color: #04a7e7;
+    line-height: 20px;
+}
+
+.experience table tr td h6 {
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+.experience table tr td:first-child p {
+    font-size: 9.5px;
+}
+
+.experience table tr td p {
+    margin: 0;
+    font-size: 13px;
+    color: #8e8e8e;
 }
 
 .skills p {
@@ -161,6 +193,6 @@ header {
     padding-right: 20px;
 }
 
-.lang{
-    background-color: #efefef;;
+.lang {
+    background-color: #efefef;
 }
