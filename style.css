@@ -7,6 +7,7 @@ body {
 
 .container {
     box-shadow: 5px 10px 10px #B6ADB0;
+    min-height: 297mm;
 }
 
 header {
@@ -141,37 +142,45 @@ header {
     width: 50%;
 }
 
+.education h3::after {
+    width: 630px;
+}
+
 .experience {
     background-image: linear-gradient(to bottom left, rgb(255, 255, 255), rgb(245, 245, 245));
 }
 
-.experience table{
+.table-data table{
     border-collapse: collapse;
     border: none;
 }
 
-.experience table tr td:first-child {
+.table-data table tr td{
+    padding-bottom: 30px;
+}
+
+.table-data table tr td:first-child {
     width: 85px;
     padding-right: 35px;
     text-align: right;
 }
 
-.experience table tr td h4 {
+.table-data table tr td h4 {
     margin: 0;
-    color: #04a7e7;
+    color: #0392c9;
     line-height: 20px;
 }
 
-.experience table tr td h6 {
+.table-data table tr td h6 {
     margin: 0;
     margin-bottom: 4px;
 }
 
-.experience table tr td:first-child p {
+.table-data table tr td:first-child p {
     font-size: 9.5px;
 }
 
-.experience table tr td p {
+.table-data table tr td p {
     margin: 0;
     font-size: 13px;
     color: #8e8e8e;
