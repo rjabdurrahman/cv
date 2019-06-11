@@ -203,6 +203,8 @@ header {
 }
 
 .hobbies ul {
+    margin: 0 10px;
+    padding: 0;
     display: flex;
     justify-content: space-between;
     list-style-type: none;
@@ -210,10 +212,18 @@ header {
 
 .hobbies ul li {
     display: inline-block;
+    text-align: center;
 }
 
-.hobbies ul li i{
-    font-size: 40px;
+.hobbies ul li i {
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.hobbies ul li label {
+    font-size: 12px;
+    font-weight: bold;
 }
 
 .lang {
