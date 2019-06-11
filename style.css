@@ -129,8 +129,20 @@ header {
     height: 1px;
     position: relative;
     vertical-align: middle;
-    width: 50%;
+    /* width: 50%; */
     margin-left: 40px;
+}
+
+.experience h3::after{
+    width: 330px;
+}
+
+.skills h3::after {
+    width: 50%;
+}
+
+.experience{
+    background-image: linear-gradient(to bottom left, rgb(255, 255, 255), rgb(240, 240, 240));
 }
 
 .skills p {
