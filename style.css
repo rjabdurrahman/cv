@@ -112,11 +112,11 @@ header {
     padding: 20px 15px;
 }
 
-.skills div:first-child {
+.skills div.data:first-child {
     background-color: #74CEF1;
 }
 
-.skills div:last-child {
+.skills div.data:last-child {
     background-color: #E2D23E;
 }
 
@@ -178,7 +178,7 @@ header {
 }
 
 .table-data table tr td:first-child p {
-    font-size: 9.5px;
+    font-size: 9.4px;
 }
 
 .table-data table tr td p {
@@ -229,5 +229,27 @@ header {
 
 .lang {
     background-color: #efefef;
-    height: 168px;
+    height: 162px;
+}
+
+/* Status Bar */
+
+table.status-container tr td:nth-child(2) {
+    width: 57%;
+}
+
+table.status-container tr td:nth-child(1) {
+    width: 80px;
+}
+
+.status-bar {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.status {
+    background-color: black;
+    height: 8px;
+    border-radius: 5px;
 }
