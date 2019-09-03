@@ -4,46 +4,43 @@
             <div class="left" style="margin-top: 140px;">
                 <a href="#signup" class="ex-font w3-btn w3-white" style="font-size: 50px;">Prepare Your CV Now <i class="fa fa-arrow-right"></i></a>
             </div>
-            <div class=" right " style="width: 400px; ">
-                <div class="w3-center " id="contact ">
-                    <span class="w3-xlarge w3-bottombar w3-border-black w3-padding-16 ">Login</span>
+            <div class="right" style="width: 400px;">
+                <div class="w3-center" id="contact">
+                    <span class="w3-xlarge w3-bottombar w3-border-black w3-padding-16">Login</span>
                 </div>
 
-                <form class="w3-container " id="loginform ">
-                    <div class="w3-section ">
+                <form class="w3-container" name="loginform">
+                    <div class="w3-section">
                         <label>&nbsp;</label>
-                        <input class="w3-input w3-border w3-hover-border-black " style="width:100%; " type="text " name="Email " placeholder="Email " required>
+                        <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="email" name="email" placeholder="Email" required>
                     </div>
-                    <div class="w3-section ">
-                        <input class="w3-input w3-border w3-hover-border-black " style="width:100%; " name="Message " placeholder="Password " required>
+                    <div class="w3-section">
+                        <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="password" name="pass" minlength="6" placeholder="Password" required>
                     </div>
-                    <button type="submit " class="w3-button w3-block w3-black ">Login</button>
+                    <button type="submit" class="w3-button w3-block w3-black">Login</button>
                 </form>
             </div>
         </div>
     </div>
 </div>
 <script>
-    var regForm = document.forms['regForm'];
+    var regForm = document.forms['loginform'];
     regForm.onsubmit = function(e) {
         let email = regForm['email'].value;
         let pass = regForm['pass'].value;
-        let cpass = regForm['cpass'].value;
-        if (pass !== cpass) {
-            alert("Password Doesn't Matched");
-        } else {
-            firebase.auth().createUserWithEmailAndPassword(email, pass)
-                .then(function(data) {
-                    alert("Your Account Created Successfully! You May Login Now!");
-                    // Clear All Fields
-                    email = pass = cpass = '';
-                    // Redirect Login
-                    location.href = '/#login';
-                })
-                .catch(function(error) {
-                    var errorMessage = error.message;
-                    alert(errorMessage);
-                });
-        }
+        firebase.auth().signInWithEmailAndPassword(email, pass)
+            .then(function(data) {
+                alert("Your are Logged in Sucessfully!");
+                // Clear All Fields
+                email = pass = '';
+                user = JSON.stringify(firebase.auth().currentUser);
+                localStorage.setItem('user', user);
+                // Redirect Login
+                location.href = '/#cv';
+            })
+            .catch(function(error) {
+                var errorMessage = error.message;
+                alert(errorMessage);
+            });
     }
 </script>

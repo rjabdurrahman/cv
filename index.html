@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Exo+2|Montserrat:300|Roboto|Lato:400,700|Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2|Montserrat:300|Roboto|Lato:400,700|Pacifico|Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -24,10 +25,12 @@
             <div class="w3-col s3">&nbsp;</div>
             <div class="w3-col s3">&nbsp;</div>
             <div class="w3-col s3">
-                <a href="#signup" class="w3-button w3-block">Sign Up</a>
+                <span>{{user}}</span>
+                <a ng-show="!logged()" href="#signup" class="w3-button w3-block">Sign Up</a>
             </div>
             <div class="w3-col s3">
-                <a href="#login" class="w3-button w3-block">Login</a>
+                <a ng-show="!logged()" href="#login" class="w3-button w3-block">Login</a>
+                <a ng-show="logged()" href="#login" class="w3-button w3-block">Log Out</a>
             </div>
         </div>
     </div>
@@ -46,6 +49,20 @@
             messagingSenderId: "880223391613"
         };
         firebase.initializeApp(config);
+        var user = null;
+        // firebase.auth().onAuthStateChanged(function(user) {
+        //     if (user) {
+        //         // User is signed in.
+        //     } else {
+        //         // No user is signed in.
+        //     }
+        // });
+        function lsGet(id) {
+            return JSON.parse(localStorage.getItem(id));
+        }
+        if (lsGet('user')) {
+            location.href = '#cv';
+        }
     </script>
 </body>
 

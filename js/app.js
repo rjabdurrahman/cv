@@ -10,10 +10,23 @@ app.config(function ($routeProvider) {
             templateUrl: 'pages/signup.html',
             controller: 'RegCntlr',
         })
+        .when('/cv', {
+            templateUrl: 'pages/cv.html',
+            controller: 'RegCntlr',
+        })
         .otherwise({ redirectTo: '/login' });
 });
 
-
+app.run(function ($rootScope, $location, $route) {
+    $rootScope.user = null;
+    $rootScope.logged = function () {
+        if (localStorage.getItem('user')){
+            $rootScope.user = lsGet('user').email;
+            return true;
+        }
+        else return false;
+    }
+});
 app.controller('LoginCntlr', function () {
     console.log('Hello');
 });
