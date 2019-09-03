@@ -1,277 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="myApp">
 
 <head>
+    <title>W3.CSS Template</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Abdur Rahman | Curriculum Vitae</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2|Montserrat:300|Roboto|Lato:400,700|Pacifico" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <div class="flex">
-                <div class="left flex">
-                    <div class="img">
-                        <img src="profile_img.jpg" alt="A. Rahman" height="150" width="150">
-                    </div>
-                    <div class="title">
-                        <h3>Abdur Rahman</h3>
-                        <h6>Web Desginer and Developer</h6>
-                    </div>
-                </div>
-                <div class="right">
-                    <div class="right-top">
-                        <p><b>Phone:</b> +880 1757-110296</p>
-                        <p><b>Area:</b> 43/2 Sukrabad, Dhaka-1205</p>
-                        <p><b>Email:</b> rj.abdurrahman@gmail.com</p>
-                    </div>
-                    <div class="right-bottom">
-                        <h4>About Me</h4>
-                        <p>I am Rahman, a professional Web Designer and Developer. I am associated with this job from
-                            2008. So I have a great experience about Web designing, Web Developing.</p>
-                    </div>
-                </div>
+    <!-- Links (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-row w3-large w3-light-grey">
+            <div class="w3-col s3">&nbsp;</div>
+            <div class="w3-col s3">&nbsp;</div>
+            <div class="w3-col s3">
+                <a href="#signup" class="w3-button w3-block">Sign Up</a>
             </div>
-            <div class="social">
-                <ul>
-                    <li>
-                        <a href="#"><i class="fa fa-skype"></i> /rjabdurrahman</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-twitter"></i> /rjabdurrahman</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-facebook"></i> /rjabdurrahman1</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-linkedin"></i> /rjabdurrahman</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-pinterest"></i> /rjabdurrahman</a>
-                    </li>
-                </ul>
-            </div>
-        </header>
-        <div class="data-container">
-            <!-- Experience and Skills Start -->
-            <div class="flex">
-                <div class="part data experience table-data" style="flex: 1.5">
-                    <h3 class="f-style">Experience</h3>
-                    <table>
-                        <tr>
-                            <td>
-                                <h4 class="f-style">Junior Designer</h4>
-                                <p>Jul 2016 - Dec 2016</p>
-                            <td>
-                                <h6>ACM Limited, Newyork</h6>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam natus recusandae ab
-                                    placeat iusto perferendis obcaecati veritatis laboriosam repellat enim?</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4 class="f-style">Senior Design</h4>
-                                <p>Jan 2017 - Dec 2017</p>
-                            <td>
-                                <h6>ACM Limited, Newyork</h6>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam natus recusandae ab
-                                    placeat iusto perferendis obcaecati veritatis laboriosam repellat enim?</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4 class="f-style">Junior Developer</h4>
-                                <p>Jul 2018 - May 2019</p>
-                            <td>
-                                <h6>ACM Limited, Newyork</h6>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam natus recusandae ab
-                                    placeat iusto perferendis obcaecati veritatis laboriosam repellat enim?</p>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="skills part" style="flex: 1">
-                    <div class="data">
-                        <h3 class="f-style">Pro Skills</h3>
-                        <p>
-                            <table class="status-container">
-                                <tr>
-                                    <td>HTML/CSS</td>
-                                    <td>
-                                        <div class="status-bar">
-                                            <div class="status" style="width: 80%"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>JavaScript</td>
-                                    <td>
-                                        <div class="status-bar">
-                                            <div class="status" style="width: 60%"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>NodeJS</td>
-                                    <td>
-                                        <div class="status-bar">
-                                            <div class="status" style="width: 30%"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Angular/React</td>
-                                    <td>
-                                        <div class="status-bar">
-                                            <div class="status" style="width: 60%"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
-                        </p>
-                    </div>
-                    <div class="data">
-                        <h3 class="f-style">Per Skills</h3>
-                        <p>
-                            <table class="status-container">
-                                <tr>
-                                    <td>Creativity</td>
-                                    <td>
-                                        <div class="status-bar">
-                                            <div class="status" style="width: 40%"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Team Work</td>
-                                    <td>
-                                        <div class="status-bar">
-                                            <div class="status" style="width: 80%"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Hard Work</td>
-                                    <td>
-                                        <div class="status-bar">
-                                            <div class="status" style="width: 60%"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Leader Ship</td>
-                                    <td>
-                                        <div class="status-bar">
-                                            <div class="status" style="width: 80%"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!-- Education Start -->
-            <div class="education part data table-data" style="background-color: #e4e4e4;">
-                <h3 class="f-style">&nbsp;&nbsp;Education</h3>
-                <table>
-                    <tr>
-                        <td>
-                            <h4 class="f-style">Graduate</h4>
-                            <p>Apr 2016 - Apr 2020</p>
-                        <td>
-                            <h6>Daffodil International University, Dhaka</h6>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam natus recusandae ab
-                                placeat iusto perferendis obcaecati veritatis laboriosam repellat enim?</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <h4 class="f-style">Higher Secondary</h4>
-                            <p>Jul 2018 - Dec 2014</p>
-                        <td>
-                            <h6>Bankara Degree College, Jessore</h6>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam natus recusandae ab
-                                placeat iusto perferendis obcaecati veritatis laboriosam repellat enim?</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <h4 class="f-style">Secondary</h4>
-                            <p>Jan 2007 - Dec 2012</p>
-                        <td>
-                            <h6>Haridrapota A.G.A High School, Jessore</h6>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam natus recusandae ab
-                                placeat iusto perferendis obcaecati veritatis laboriosam repellat enim?</p>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <!-- Hobbies and Language -->
-            <div class="flex">
-                <div class="hobbies part data" style="flex: 1.5">
-                    <h3 class="f-style">Hobbies&nbsp;&nbsp;&nbsp;</h3>
-                    <ul>
-                        <li>
-                            <i class="fa fa-twitter"></i><br>
-                            <label>Photography</label>
-                        </li>
-                        <li>
-                            <i class="fa fa-twitter"></i><br>
-                            <label>Music</label>
-                        </li>
-                        <li>
-                            <i class="fa fa-twitter"></i><br>
-                            <label>Football</label>
-                        </li>
-                        <li>
-                            <i class="fa fa-twitter"></i><br>
-                            <label>Cycling</label>
-                        </li>
-                        <li>
-                            <i class="fa fa-twitter"></i><br>
-                            <label>Reading</label>
-                        </li>
-                        <li>
-                            <i class="fa fa-twitter"></i><br>
-                            <label>Video Game</label>
-                        </li>
-                    </ul>
-                </div>
-                <div class="lang part" style="flex: 1;">
-                    <div class="data">
-                        <h3 class="f-style">Language</h3>
-                        <p>
-                            <table class="status-container">
-                                <tr>
-                                    <td>Bangla</td>
-                                    <td>
-                                        <div class="status-bar">
-                                            <div class="status" style="width: 90%"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>English</td>
-                                    <td>
-                                        <div class="status-bar">
-                                            <div class="status" style="width: 60%"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
-                        </p>
-                    </div>
-                </div>
+            <div class="w3-col s3">
+                <a href="#login" class="w3-button w3-block">Login</a>
             </div>
         </div>
-        <!-- End of the Content -->
     </div>
+    <!-- Here -->
+    <ng-view></ng-view>
+    <script src="js/app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBpQOjE7MXFMK5nn8T6dvjeG9-8f8ymWW4",
+            authDomain: "chatapp-1f75d.firebaseapp.com",
+            databaseURL: "https://chatapp-1f75d.firebaseio.com",
+            projectId: "chatapp-1f75d",
+            storageBucket: "chatapp-1f75d.appspot.com",
+            messagingSenderId: "880223391613"
+        };
+        firebase.initializeApp(config);
+    </script>
 </body>
 
 </html>

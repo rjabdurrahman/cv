@@ -1,0 +1,47 @@
+.overlay-inner {
+    background-color: rgba(211, 211, 214, 0.5);
+    height: 100vh;
+    width: 100%;
+    z-index: 99;
+    overflow: hidden;
+}
+
+.overlay {
+    background: url('img/bg.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.robo-font {
+    font-family: 'Roboto', sans-serif;
+}
+
+.mont-font {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+}
+
+.ex-font {
+    font-family: 'Exo 2', sans-serif;
+}
+
+.st-button {
+    border: 1px solid black;
+    padding: 8px 16px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex div h1 {
+    text-align: center;
+}
+
+
+/* .left,
+.right {
+    border: 1px solid red;
+} */
