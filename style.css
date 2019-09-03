@@ -1,11 +1,8 @@
-body {
+.container {
     margin: 0;
     width: 210mm;
     margin: auto;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-.container {
     box-shadow: 5px 10px 10px #B6ADB0;
     height: 297mm;
     margin-bottom: 50px;
@@ -13,7 +10,6 @@ body {
 
 header {
     background-image: linear-gradient(to bottom right, rgb(100, 100, 100), rgb(20, 20, 20));
-    /* background-color: rgb(100, 100, 100); */
     padding: 20px 20px 5px;
     color: #ede8e8;
     font-size: 14px;
@@ -47,23 +43,23 @@ header {
     font-size: 11px;
 }
 
-.left {
+.cvleft {
     padding-top: 20px;
     border-right: 2px solid #B6ADB0;
     width: 100%;
 }
 
-.right {
+.cvright {
     margin-left: 20px;
     width: 100%;
 }
 
-.right p {
+.cvright p {
     margin-top: 4px;
     margin-bottom: 4px;
 }
 
-.right h4 {
+.cvright h4 {
     margin-top: 8px;
     margin-bottom: 4px;
     text-transform: uppercase;
@@ -71,11 +67,11 @@ header {
     font-weight: normal;
 }
 
-.right .right-top {
+.cvright .cvright-top {
     border-bottom: 1px solid #B6ADB0;
 }
 
-.right .right-top p {
+.cvright .cvright-top p {
     margin-top: 12px;
     margin-bottom: 12px;
 }
@@ -135,11 +131,13 @@ header {
     margin-left: 40px;
 }
 
-.experience h3::after, .hobbies h3::after {
+.experience h3::after,
+.hobbies h3::after {
     width: 330px;
 }
 
-.skills h3::after, .lang h3::after {
+.skills h3::after,
+.lang h3::after {
     width: 50%;
 }
 
@@ -191,12 +189,14 @@ header {
     margin: 0;
 }
 
-.skills table, .lang table {
+.skills table,
+.lang table {
     font-size: 12px;
     font-weight: bold;
 }
 
-.skills table tr td:first-child, .lang table tr td:first-child {
+.skills table tr td:first-child,
+.lang table tr td:first-child {
     text-align: right;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -231,6 +231,7 @@ header {
     background-color: #efefef;
     height: 162px;
 }
+
 
 /* Status Bar */
 
