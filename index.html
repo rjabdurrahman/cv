@@ -9,6 +9,7 @@
     <script src="js/jquery-ui.js"></script>
     <script src="js/angular.min.js"></script>
     <script src="js/angular-route.min.js"></script>
+    <script src="js/angularfire.min.js"></script>
     <link rel="stylesheet" href="css/w3.css">
     <link rel="stylesheet" href="css/style2.css">
     <link rel="stylesheet" href="css/style.css">
@@ -61,7 +62,7 @@
             return JSON.parse(localStorage.getItem(id));
         }
         if (lsGet('user')) {
-            location.href = '#cv';
+            location.href = '#edit_info';
         }
     </script>
 </body>

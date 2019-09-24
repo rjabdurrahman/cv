@@ -10,6 +10,10 @@ app.config(function ($routeProvider) {
             templateUrl: 'pages/signup.html',
             controller: 'RegCntlr',
         })
+        .when('/edit_info', {
+            templateUrl: 'pages/edit_info.html',
+            controller: 'RegCntlr',
+        })
         .when('/cv', {
             templateUrl: 'pages/cv.html',
             controller: 'RegCntlr',
