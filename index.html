@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>    
     <script src="js/jquery-ui.js"></script>
     <script src="js/angular.min.js"></script>
     <script src="js/angular-route.min.js"></script>
@@ -38,18 +39,8 @@
     <!-- Here -->
     <ng-view></ng-view>
     <script src="js/app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+    <script src="js/main.js"></script>    
     <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyBpQOjE7MXFMK5nn8T6dvjeG9-8f8ymWW4",
-            authDomain: "chatapp-1f75d.firebaseapp.com",
-            databaseURL: "https://chatapp-1f75d.firebaseio.com",
-            projectId: "chatapp-1f75d",
-            storageBucket: "chatapp-1f75d.appspot.com",
-            messagingSenderId: "880223391613"
-        };
-        firebase.initializeApp(config);
         var user = null;
         // firebase.auth().onAuthStateChanged(function(user) {
         //     if (user) {
