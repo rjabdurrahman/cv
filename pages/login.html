@@ -36,7 +36,7 @@
                 user = JSON.stringify(firebase.auth().currentUser);
                 localStorage.setItem('user', user);
                 // Redirect Login
-                location.href = '/#cv';
+                location.href = '/#edit_info';
             })
             .catch(function(error) {
                 var errorMessage = error.message;

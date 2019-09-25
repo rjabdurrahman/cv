@@ -1,8 +1,7 @@
 <div class="w3-modal w3-animate-opacity" style="display: block; margin-top: 45px;">
-    <div class="w3-modal-content w3-card-4 w3-light-grey">
+    <div id="infoPart" ng-if="basicInfo.$resolved && !basicInfo.name" class="w3-modal-content w3-card-4 w3-light-grey">
         <form name="basicinfo" class="w3-container w3-text-indigo w3-margin">
             <h2 class="w3-center">Add Basic Info</h2>
-
             <div class="w3-row w3-section">
                 <div class="w3-col" style="width:40px"><i class="w3-xlarge fa fa-user"></i></div>
                 <div class="w3-rest">
@@ -31,22 +30,29 @@
                 </div>
             </div>
 
-            <button class="w3-button w3-block w3-section w3-indigo w3-ripple w3-padding">Next <i
+            <button type="submit" class="w3-button w3-block w3-section w3-indigo w3-ripple w3-padding">Next <i
                     class="fa fa-angle-right" style="font-size:22px; vertical-align: middle;"></i></button>
-
         </form>
     </div>
 </div>
 <script>
-    let info = document.forms['basicinfo'];
-    info.onsubmit = function (e) {
-        let basicInfo = {
-            name: info['name'].value,
-            title: info['title'].value,
-            phone: info['phone'].value,
-            address: info['address'].value
+    setTimeout(function () {
+        let info = document.forms['basicinfo'];
+        info.onsubmit = function (e) {
+            let basicInfo = {
+                name: info['name'].value,
+                title: info['title'].value,
+                phone: info['phone'].value,
+                address: info['address'].value
+            }
+            dbRef('/basicInfo').set(basicInfo)
+                .then(function () {
+                    info.style.display = 'none';
+                })
+                .catch(function (err) {
+                    alert(err.message);
+                })
+            console.log(basicInfo);
         }
-        dbRef('/basicInfo').set(basicInfo);
-        console.log(basicInfo);
-    }
+    }, 5000);
 </script>

@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ['ngRoute']);
+var app = angular.module('myApp', ['ngRoute', 'firebase']);
 
 app.config(function ($routeProvider) {
     $routeProvider
@@ -12,7 +12,7 @@ app.config(function ($routeProvider) {
         })
         .when('/edit_info', {
             templateUrl: 'pages/edit_info.html',
-            controller: 'RegCntlr',
+            controller: 'EditCntlr',
         })
         .when('/cv', {
             templateUrl: 'pages/cv.html',
@@ -24,7 +24,7 @@ app.config(function ($routeProvider) {
 app.run(function ($rootScope, $location, $route) {
     $rootScope.user = null;
     $rootScope.logged = function () {
-        if (localStorage.getItem('user')){
+        if (localStorage.getItem('user')) {
             $rootScope.user = lsGet('user').email;
             return true;
         }
@@ -37,4 +37,8 @@ app.controller('LoginCntlr', function () {
 
 app.controller('RegCntlr', function () {
     console.log('Hello');
+});
+
+app.controller('EditCntlr', function ($scope, $firebaseObject) {
+    $scope.basicInfo = $firebaseObject(dbRef('/basicInfo'));
 });
