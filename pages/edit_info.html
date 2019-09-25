@@ -29,6 +29,12 @@
                     <input class="w3-input w3-border" name="address" type="text" placeholder="Address" required>
                 </div>
             </div>
+            <div class="w3-row w3-section">
+                <div class="w3-col" style="width:40px"><i class="w3-xlarge fa fa-pencil"></i></div>
+                <div class="w3-rest">
+                    <textarea class="w3-input w3-border" name="about" rows="6" placeholder="About You"></textarea>
+                </div>
+            </div>
 
             <button type="submit" class="w3-button w3-block w3-section w3-indigo w3-ripple w3-padding">Next <i
                     class="fa fa-angle-right" style="font-size:22px; vertical-align: middle;"></i></button>
@@ -43,7 +49,8 @@
                 name: info['name'].value,
                 title: info['title'].value,
                 phone: info['phone'].value,
-                address: info['address'].value
+                address: info['address'].value,
+                about: info['about'].value
             }
             dbRef('/basicInfo').set(basicInfo)
                 .then(function () {
