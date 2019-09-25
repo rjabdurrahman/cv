@@ -31,20 +31,22 @@
                 </div>
             </div>
 
-            <button class="w3-button w3-block w3-section w3-indigo w3-ripple w3-padding">Next <i class="fa fa-angle-right" style="font-size:22px; vertical-align: middle;"></i></button>
+            <button class="w3-button w3-block w3-section w3-indigo w3-ripple w3-padding">Next <i
+                    class="fa fa-angle-right" style="font-size:22px; vertical-align: middle;"></i></button>
 
         </form>
     </div>
 </div>
 <script>
     let info = document.forms['basicinfo'];
-    info.onsubmit = function(e){
-        let data = {
+    info.onsubmit = function (e) {
+        let basicInfo = {
             name: info['name'].value,
             title: info['title'].value,
             phone: info['phone'].value,
             address: info['address'].value
         }
+        dbRef('/basicInfo').set(basicInfo);
+        console.log(basicInfo);
     }
-    console.log(db);
 </script>

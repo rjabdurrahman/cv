@@ -9,4 +9,6 @@ var config = {
 };
 firebase.initializeApp(config);
 
-const db = firebase.database().ref('/cv/' + JSON.parse(localStorage.user).uid);
+function dbRef(ref){
+    return firebase.database().ref('/cv/' + JSON.parse(localStorage.user).uid + ref);
+}
