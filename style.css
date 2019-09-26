@@ -261,9 +261,11 @@ table.status-container tr td:nth-child(1) {
     position: absolute;
     left: 0;
     border-radius: 50%;
-    opacity: 0;
+    opacity: 0.5;
+    padding-top: 65px;
+    padding-left: 30px;
 }
 .avater_upload:hover{
-    opacity: 0.5;
+    opacity: 0.8;
     background: lightblue;
 }
