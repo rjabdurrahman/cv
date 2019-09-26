@@ -16,7 +16,7 @@ app.config(function ($routeProvider) {
         })
         .when('/cv', {
             templateUrl: 'pages/cv.html',
-            controller: 'RegCntlr',
+            controller: 'CVCntlr',
         })
         .otherwise({ redirectTo: '/login' });
 });
@@ -40,5 +40,9 @@ app.controller('RegCntlr', function () {
 });
 
 app.controller('EditCntlr', function ($scope, $firebaseObject) {
+    $scope.basicInfo = $firebaseObject(dbRef('/basicInfo'));
+});
+
+app.controller('CVCntlr', function ($scope, $firebaseObject) {
     $scope.basicInfo = $firebaseObject(dbRef('/basicInfo'));
 });

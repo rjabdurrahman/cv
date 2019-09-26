@@ -1,3 +1,29 @@
+<div class="container">
+    <header>
+        <div class="flex">
+            <div class="cvleft flex">
+                <div class="img">
+                    <img src="profile_img.jpg" alt="A. Rahman" height="150" width="150">
+                </div>
+                <div class="title">
+                    <h3>{{basicInfo.name}}</h3>
+                    <h6>{{basicInfo.title}}</h6>
+                </div>
+            </div>
+            <div class="cvright">
+                <div class="right-top">
+                    <p><b>Phone:</b> +880 {{basicInfo.phone}}</p>
+                    <p><b>Area:</b> {{basicInfo.address}}</p>
+                    <p><b>Email:</b> rj.abdurrahman@gmail.com</p>
+                </div>
+                <div class="right-bottom">
+                    <h4>About Me</h4>
+                    <p>{{basicInfo.about}}</p>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
 <div class="w3-modal w3-animate-opacity" style="display: block; margin-top: 45px;">
     <div id="infoPart" ng-if="basicInfo.$resolved && !basicInfo.name" class="w3-modal-content w3-card-4 w3-light-grey">
         <form name="basicinfo" class="w3-container w3-text-indigo w3-margin">
