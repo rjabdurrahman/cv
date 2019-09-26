@@ -12,3 +12,7 @@ firebase.initializeApp(config);
 function dbRef(ref){
     return firebase.database().ref('/cv/' + JSON.parse(localStorage.user).uid + ref);
 }
+
+function stRef(ref){
+    return firebase.storage().ref(ref);
+}
