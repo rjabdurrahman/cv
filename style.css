@@ -260,4 +260,10 @@ table.status-container tr td:nth-child(1) {
     width: 150px;
     position: absolute;
     left: 0;
+    border-radius: 50%;
+    opacity: 0;
+}
+.avater_upload:hover{
+    opacity: 0.5;
+    background: lightblue;
 }
