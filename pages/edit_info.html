@@ -1,4 +1,4 @@
-<div class="container">
+<div ng-show="basicInfo.$resolved && basicInfo.name" class="container">
     <header>
         <div class="flex">
             <div class="cvleft flex">
@@ -24,8 +24,8 @@
         </div>
     </header>
 </div>
-<div class="w3-modal w3-animate-opacity" style="display: block; margin-top: 45px;">
-    <div id="infoPart" ng-if="basicInfo.$resolved && !basicInfo.name" class="w3-modal-content w3-card-4 w3-light-grey">
+<div id="infoPart" ng-if="basicInfo.$resolved && !basicInfo.name" class="w3-modal w3-animate-opacity" style="display: block; margin-top: 45px;">
+    <div class="w3-modal-content w3-card-4 w3-light-grey">
         <form name="basicinfo" class="w3-container w3-text-indigo w3-margin">
             <h2 class="w3-center">Add Basic Info</h2>
             <div class="w3-row w3-section">
