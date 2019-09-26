@@ -255,3 +255,9 @@ table.status-container tr td:nth-child(1) {
     height: 8px;
     border-radius: 5px;
 }
+.avater_upload{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    left: 0;
+}
