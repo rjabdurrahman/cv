@@ -9,6 +9,8 @@ var config = {
 };
 firebase.initializeApp(config);
 
+var user = firebase.auth().currentUser;
+
 function dbRef(ref){
     return firebase.database().ref('/cv/' + JSON.parse(localStorage.user).uid + ref);
 }

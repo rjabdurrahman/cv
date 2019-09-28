@@ -92,14 +92,29 @@
             }
         }
         let profileImg = document.getElementById('profileimg');
-        profileImg.onchange = function(e){
+        profileImg.onchange = function (e) {
             stRef().put(e.target.files[0])
-            .then(function(){
-                console.log('Uploaded');
-            })
-            .catch(function(err){
-                console.log(err.message);
-            })
+                .then(function () {
+                    console.log('Uploaded');
+                    getProfileImg();
+                })
+                .catch(function (err) {
+                    console.log(err.message);
+                })
         }
     }, 5000);
+    function getProfileImg() {
+        stRef().getDownloadURL().then(function (downloadURL) {
+            console.log(downloadURL);
+            firebase.auth().currentUser.updateProfile({
+                photoURL: downloadURL
+            })
+            .then(function(){
+                console.log('Profile Updated')
+            })
+            .catch(function(err){
+                console.log(err.message)
+            })
+        });
+    }
 </script>
