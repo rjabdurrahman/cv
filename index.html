@@ -53,7 +53,7 @@
             return JSON.parse(localStorage.getItem(id));
         }
         if (lsGet('user')) {
-            location.href = location.pathname + '#edit_info';
+            location.href = '#edit_info';
         }
         function logOut(){
             localStorage.removeItem('user');
