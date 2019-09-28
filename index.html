@@ -32,7 +32,7 @@
             </div>
             <div class="w3-col s3">
                 <a ng-show="!logged()" href="#login" class="w3-button w3-block">Login</a>
-                <a ng-show="logged()" href="#login" class="w3-button w3-block">Log Out</a>
+                <button ng-show="logged()" onclick="logOut()" class="w3-button w3-block">Log Out</button>
             </div>
         </div>
     </div>
@@ -53,8 +53,12 @@
             return JSON.parse(localStorage.getItem(id));
         }
         if (lsGet('user')) {
-            location.href = 'cv/#edit_info';
-            // location.href = '#edit_info';
+            location.href = location.pathname + '#edit_info';
+        }
+        function logOut(){
+            localStorage.removeItem('user');
+            location.reload();
+            location.href = location.pathname + '#login';
         }
     </script>
 </body>
