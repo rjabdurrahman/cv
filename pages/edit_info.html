@@ -4,7 +4,7 @@
             <div class="cvleft flex">
                 <div class="img" style="position: relative">
                     <img src="img/avater.jpg" alt="A. Rahman" height="150" width="150">
-                    <input class="avater_upload" type="file" name="profileimg" accept=".png, .jpg, .jpeg">
+                    <input class="avater_upload" type="file" id="profileimg" accept=".png, .jpg, .jpeg">
                 </div>
                 <div class="title">
                     <h3>{{basicInfo.name}}</h3>
@@ -25,7 +25,8 @@
         </div>
     </header>
 </div>
-<div id="infoPart" ng-if="basicInfo.$resolved && !basicInfo.name" class="w3-modal w3-animate-opacity" style="display: block; margin-top: 45px;">
+<div id="infoPart" ng-if="basicInfo.$resolved && !basicInfo.name" class="w3-modal w3-animate-opacity"
+    style="display: block; margin-top: 45px;">
     <div class="w3-modal-content w3-card-4 w3-light-grey">
         <form name="basicinfo" class="w3-container w3-text-indigo w3-margin">
             <h2 class="w3-center">Add Basic Info</h2>
@@ -71,22 +72,34 @@
 <script>
     setTimeout(function () {
         let info = document.forms['basicinfo'];
-        info.onsubmit = function (e) {
-            let basicInfo = {
-                name: info['name'].value,
-                title: info['title'].value,
-                phone: info['phone'].value,
-                address: info['address'].value,
-                about: info['about'].value
+        if (info) {
+            info.onsubmit = function (e) {
+                let basicInfo = {
+                    name: info['name'].value,
+                    title: info['title'].value,
+                    phone: info['phone'].value,
+                    address: info['address'].value,
+                    about: info['about'].value
+                }
+                dbRef('/basicInfo').set(basicInfo)
+                    .then(function () {
+                        info.style.display = 'none';
+                    })
+                    .catch(function (err) {
+                        alert(err.message);
+                    })
+                console.log(basicInfo);
             }
-            dbRef('/basicInfo').set(basicInfo)
-                .then(function () {
-                    info.style.display = 'none';
-                })
-                .catch(function (err) {
-                    alert(err.message);
-                })
-            console.log(basicInfo);
+        }
+        let profileImg = document.getElementById('profileimg');
+        profileImg.onchange = function(e){
+            stRef().put(e.target.files[0])
+            .then(function(){
+                console.log('Uploaded');
+            })
+            .catch(function(err){
+                console.log(err.message);
+            })
         }
     }, 5000);
 </script>
